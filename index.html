@@ -1,8 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <script>
+            function greeting(){
+                let name = prompt('Please input your name:')
+                document.getElementById('demo').innerHTML = `Hello ${name}`;
+                window.alert(`Hello ${name}`);
+            }
+            const changeToRed =()=>{
+                document.getElementById('demo').style.color='red';
+                document.getElementById('demo').style.fontSize='30px';
+            }
+            const changeImageCat =() =>{
+                document.getElementById('pic').src="image/cat.jpg"
+            }
+            const changeImageDog =() =>{
+                document.getElementById('pic').src="image/dog.jpg"
+            }
+        </script>
+    </head>
     <body>
-        <img src="https://th.bing.com/th/id/OIP.d_MFDx2sYUDUwfheLC3NggHaDL?pid=ImgDet&rs=1">
-        <img src="https://th.bing.com/th/id/OIP.d_MFDx2sYUDUwfheLC3NggHaDL?pid=ImgDet&rs=1">
+        <img id="pic" width="550">
+        <h2>MY first JavaScript</h2>
+
+        <button type="button"
+        onclick="changeImageCat()">
+        Cat</button>
+        <button type="button"
+        onclick="changeImageDog ()">
+        Dog</button>
+
+        <button type="button"
+onclick="greeting()">
+Click me to display Date and Time.</button>
+        <button type="button"
+onclick="changeToRed()">
+Click to change the color of text.</button>
+
+<p id="demo"></p>
     </body>
 </html>
