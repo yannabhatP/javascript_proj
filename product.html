@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Keychron TimEdit</h1>
+        <div id="demo"></div>
+        <script>
+            const keyboard = [
+                {
+                    id:'kck1',
+                    name:'Keychron K1',
+                    price : 4390,
+                    image :'image/Keychron K1.jpg'
+                },
+                {
+                    id:'kck2',
+                    name:'Keychron K2',
+                    price : 3890,
+                    image :'image/Keychron K2.jpg'
+                },
+                {
+                    id:'kck3',
+                    name:'Keychron K3',
+                    price : 3890,
+                    image :'image/Keychron K3.jpg'
+                },
+                {
+                    id:'kck4',
+                    name:'Keychron K4',
+                    price : 4390,
+                    image :'image/Keychron K4.jpg'
+                },
+                {
+                    id:'kck5',
+                    name:'Keychron K5',
+                    price : 4390,
+                    image :'image/Keychron K5.jpg'
+                },
+                {
+                    id:'kck6',
+                    name:'Keychron K6',
+                    price : 3890,
+                    image :'image/Keychron K6.jpg'
+                },
+                {
+                    id:'kck7',
+                    name:'Keychron K7',
+                    price : 3890,
+                    image :'image/Keychron K7.jpg'
+                },
+                {
+                    id:'kck8',
+                    name:'Keychron K8',
+                    price : 4090,
+                    image :'image/Keychron K8.jpg'
+                },
+                {
+                    id:'kck10',
+                    name:'Keychron K10',
+                    price : 4390,
+                    image :'image/Keychron K10.jpg'
+                },
+                {
+                    id:'kck12',
+                    name:'Keychron K12',
+                    price : 3890,
+                    image :'image/Keychron K12.jpg'
+                },
+            ]
+            let text = "<ul>";
+            keyboard.forEach(myFunction);
+            text += "</ul>";
+            document.getElementById("demo").innerHTML = text;
+
+            function myFunction(value) {
+                
+                text += `<li> ${value.name} <p>Price = ${value.price} Baht</p><br><img width="400" src="${value.image}"> </li>`
+            } 
+        </script>
+    </body>
+</html>
