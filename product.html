@@ -2,11 +2,12 @@
 <html>
     <body>
         <h1>Keychron TimEdit</h1>
-        <button onclick="onPressTable()">Show Table</button>
+        <button onclick="onPressTable()"><p id="text-btn">Show Table</p></button>
         <div id="demo"></div>
         
         <script>
             let statecClick = false;
+            let textBtn = 'Show Table'
             const keyboard = [
                 {
                     id:'kck1',
@@ -73,6 +74,7 @@
             const onPressTable = () =>{
                 if(!statecClick){
                     statecClick = true;
+                    textBtn = 'Disble Table';
                     let text = "<ul>";
                     keyboard.forEach(myFunction);
                     text += "</ul>";
@@ -81,14 +83,16 @@
                     function myFunction(value) {
                         text += `<li> ${value.name} <p>Price = ${value.price} Baht</p><br><img width="400" src="${value.image}"> </li>`
                     } 
+                   
 
                 }else{
                     statecClick = false;
+                    textBtn = 'Show Table'
                     let text = "<div>";
                     text += "</div>";
                     document.getElementById("demo").innerHTML = text;
                 }
-
+                document.getElementById('text-btn').innerHTML = textBtn;
                
                
                 
